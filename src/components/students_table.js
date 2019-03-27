@@ -1,32 +1,13 @@
 import React, {Component} from 'react';
-import studentData from '../dummy_data/student_list';
+
 
 
 
 class StudentTable extends Component {
-    state = {
-        students: [],
-    };
-
-    componentDidMount() {
-        this.getStudentData();
-    }
-
-    getStudentData(){
-        // call server here
-
-        // update component state with student list
-        this.setState({
-            students: studentData,
-        })
-    }
-
     render(){
-        console.log('State:', this.state);
+        const {size = 's12', list} = this.props;
 
-        const {students} = this.state;
-
-        const studentElements = students.map((student)=>{
+        const studentElements = list.map((student)=>{
             return (
                 <tr key={student.id}>
                     <td>{student.name}</td>
@@ -35,9 +16,8 @@ class StudentTable extends Component {
                 </tr>
             )
         });
-
         return(
-            <div className="col s12 m8">
+            <div className={`col ${size}`}>
                 <table>
                     <thead>
                         <tr>
