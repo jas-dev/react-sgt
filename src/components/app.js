@@ -12,6 +12,21 @@ class App extends Component {
     state = {
         students: [],
     };
+    deleteStudent = id =>{
+        const studentsCopy = this.state.students.slice();
+
+        const index = studentsCopy.findIndex((student)=>{
+            return student.id === id;
+        });
+
+        if(index >= 0){
+            studentsCopy.splice(index, 1);
+            this.setState({
+                students: [...studentsCopy]
+            });
+        }
+
+    };
     addStudent = student=>{
         student.id = id++;
         this.setState({
@@ -33,7 +48,7 @@ class App extends Component {
             <div>
                 <h1 className="center">SGT in Schmreact</h1>
                 <div className="row">
-                    <StudentTable size="s12 m8" list={this.state.students}/>
+                    <StudentTable delete={this.deleteStudent} size="s12 m8" list={this.state.students}/>
                     <AddStudent size="s12 m4" add={this.addStudent}/>
                 </div>
             </div>
