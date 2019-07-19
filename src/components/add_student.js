@@ -42,7 +42,7 @@ class AddStudent extends Component{
                 <div className="input-field">
                     <input name="grade" id="grade" type="text" value={grade} onChange={this.handleInputChange}/>
                     <label htmlFor="grade">Grade</label>
-                    <button className="btn green">Add</button>
+                    <button className="btn green">Add Student</button>
                 </div>
             </form>
         );
