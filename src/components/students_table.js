@@ -8,8 +8,10 @@ class StudentTable extends Component {
         const {size = 's12', list} = this.props;
 
         const studentElements = list.map((student)=>{
-            /*return <StudentRow key={student.id} name={student.name} course={student.course} grade={student.grade}/>*/
-            return <StudentRow delete={this.props.delete} key={student.id}{...student}/>
+
+            return (
+
+            <StudentRow delete={this.props.delete} key={student.id}{...student}/>)
 
         });
         return(
