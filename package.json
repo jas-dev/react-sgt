@@ -20,13 +20,13 @@
     "url": "https://github.com/jas-dev/react-sgt.git"
   },
   "dependencies": {
-    "axios": "^1.6.0",
-    "materialize-css": "^1.0.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^6.0.0",
-    "redux": "^4.0.4",
-    "redux-form": "^8.2.4"
+    "axios": "^1.6.5",
+    "bootstrap": "^5.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "redux": "^5.0.1",
+    "redux-form": "^8.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
