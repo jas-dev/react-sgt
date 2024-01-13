@@ -1,10 +1,10 @@
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 const merge = require('webpack-merge');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
-    entry: ['@babel/polyfill', './index.js'],
+    entry: ['./index.js'],
     mode: 'production',
     plugins: [
         new webpack.DefinePlugin({
@@ -12,8 +12,9 @@ module.exports = merge(common, {
                 NODE_ENV: JSON.stringify('production')
             }
         }),
-        new UglifyJsPlugin({
-            sourceMap: true
-        })
-    ]
+    ],
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin()]
+    }
 });
