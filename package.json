@@ -20,7 +20,7 @@
     "url": "https://github.com/jas-dev/react-sgt.git"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^1.6.0",
     "materialize-css": "^1.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
