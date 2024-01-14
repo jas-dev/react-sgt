@@ -1,5 +1,4 @@
-import 'materialize-css/dist/css/materialize.min.css'
-import 'materialize-css/dist/js/materialize.min';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {Component} from 'react';
 import '../assets/css/app.scss';
 import StudentTable from './students_table';
