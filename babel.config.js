@@ -25,12 +25,7 @@ module.exports = function (api) {
       "@babel/plugin-proposal-throw-expressions",
       "@babel/plugin-syntax-dynamic-import",
       "@babel/plugin-syntax-import-meta",
-      [
-        "@babel/plugin-transform-class-properties",
-        {
-          "loose": true
-        }
-      ],
+      "@babel/plugin-transform-class-properties",
       isDevelopment && require.resolve('react-refresh/babel')
     ].filter(Boolean) // Filter out false values in development mode
   }

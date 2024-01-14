@@ -15,7 +15,7 @@ const devServerOptions = {
     port: PORT,
     open: true, // Open browser after server had been started
     proxy: npm_config.proxy,
-    hot: false, // Set to true if using HMR
+    hot: true, // Set to true if using HMR
     client: {
         logging: 'info', // Can be set to 'none', 'error', 'warn', 'info', or 'log'
         overlay: { // Show errors and warnings in the browser
@@ -28,8 +28,6 @@ const devServerOptions = {
         stats: 'minimal', // Can be 'none', 'errors-only', 'minimal', 'normal', or 'detailed'
     },
 };
-
-WebpackDevServer.addDevServerEntrypoints(config, devServerOptions);
 
 const compiler = webpack(config);
 const server = new WebpackDevServer(devServerOptions, compiler);
