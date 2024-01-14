@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {Component} from 'react';
-import '../assets/css/app.scss';
 import StudentTable from './students_table';
 import AddStudent from "./add_student";
 import axios from 'axios';
